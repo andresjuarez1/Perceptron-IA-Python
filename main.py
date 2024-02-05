@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import perceptron as pl
+import main as pl
 import os
 
 numeroEpocas = 0

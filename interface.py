@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import filedialog, ttk
-import perceptron as pl
+import main as per
 import threading
 import numpy as np
 
@@ -16,10 +16,10 @@ def startTrain():
         tasaDeAprendizaje = float(tasaDeAprendizajeInput.get())
         epocas = int(epocasInput.get())
         rutaArchivo = fileLabel.cget("text")
-        threading.Thread(target=lambda: pl.trainPerceptron(tasaDeAprendizaje, epocas, rutaArchivo)).start()
+        threading.Thread(target=lambda: per.trainPerceptron(tasaDeAprendizaje, epocas, rutaArchivo)).start()
         np.set_printoptions(precision=4, suppress=True)
 
-        pl.showResults()
+        per.showResults()
     except ValueError:
         print("Ingresa valores numéricos")
     
