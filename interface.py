@@ -5,7 +5,7 @@ import threading
 import numpy as np
 
 def selectFile():
-    filename = filedialog.askopenfilename(initialdir="/", title="Select file", filetypes=(("csv files", "*.csv"),("all files", "*.*")))
+    filename = filedialog.askopenfilename(initialdir="/", title="Selecciona el archivo", filetypes=(("csv files", "*.csv"),("all files", "*.*")))
     fileLabel.config(text=filename)
     return filename
 

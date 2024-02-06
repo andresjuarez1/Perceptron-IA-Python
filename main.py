@@ -12,7 +12,7 @@ errorEpocas = []
 pesosIniciales = None
 
 
-def obtener_pesos():
+def obtenerPeso():
     return pesosIniciales, pesosFinales, numeroEpocas, errorPermisible 
 
 def trainPerceptron(tasaDeAprendizaje, epocas, rutaArchivo):
@@ -32,7 +32,7 @@ def trainPerceptron(tasaDeAprendizaje, epocas, rutaArchivo):
 
     print(f"Pesos iniciales {pesos}")
     np.set_printoptions(precision=4, suppress=True)
-    pesosIniciales, pesosFinales, epocas, error = pl.obtener_pesos()
+    pesosIniciales, pesosFinales, epocas, error = pl.obtenerPeso()
     print(f"Épocas: {epocas}")
     print(f"Error permisible: {error}")
     print(f"Pesos iniciales: {pesosIniciales}")
